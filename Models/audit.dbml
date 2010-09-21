@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Spectrum" Class="auditDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=LIBP02P-IA9TFO1\SIMON;Initial Catalog=Spectrum;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SpectrumConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.audit" Member="audits">
+    <Type Name="audit">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="timestamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="hasbeensent" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ip" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="mhandle" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="manu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="devicetype" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="macaddress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="landscape" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hashvalue" Type="System.String" DbType="NVarChar(35)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AMIT" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=I-HNDYP-0055-01;Initial Catalog=AMIT;Persist Security Info=True;User ID=gkeary" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="AMITConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.asa" Member="asas">
+    <Type Name="asa">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="businessowner" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="servername" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ismonitored" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="toolname" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="whyunmonitored" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="environment" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nodetype" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="framename" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="datacenter" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hardwaremodel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="os" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="serialnumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="servereol" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="installdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="lastupdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

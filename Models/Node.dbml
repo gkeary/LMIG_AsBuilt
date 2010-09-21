@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Spectrum" Class="NodeDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=LIBP02P-IA9TFO1\SIMON;Initial Catalog=Spectrum;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SpectrumConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.spec" Member="Nodes">
+    <Type Name="Node">
+      <Column Name="composite" Type="System.String" DbType="VarChar(304)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ip" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mhandle" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="manu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="devicetype" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="macaddress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="landscape" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hashvalue" Type="System.String" DbType="NVarChar(35)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

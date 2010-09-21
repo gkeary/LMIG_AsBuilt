@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="ApplicationServices-Web.config Connection String" description="ApplicationServices Connection String used in web.config by the application to access the database." defaultvalue="data source=.\SQLEXPRESS;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|aspnetdb.mdf;User Instance=true" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ApplicationServices']/@connectionString" />
+  </parameter>
+  <parameter name="AMITConnectionString-Web.config Connection String" description="AMITConnectionString Connection String used in web.config by the application to access the database." defaultvalue="Data Source=I-HNDYP-0055-01;Initial Catalog=AMIT;Persist Security Info=True;User ID=gkeary;Password=kristian" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AMITConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="SpectrumConnectionString-Web.config Connection String" description="SpectrumConnectionString Connection String used in web.config by the application to access the database." defaultvalue="Data Source=LIBP02P-IA9TFO1\SIMON;Initial Catalog=Spectrum;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SpectrumConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

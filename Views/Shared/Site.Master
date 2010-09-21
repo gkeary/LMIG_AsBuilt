@@ -1,0 +1,107 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<script runat="server">
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+</script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+        <%
+        Html.Telerik().StyleSheetRegistrar()
+            //.Add("telerik.vista.css")) cf vista sunset, outlook, windows7, web20, webblue
+            .DefaultGroup(group => group.Add("telerik.common.css")
+                .Add("telerik.outlook.css")
+               // .Add("telerik.examples.css")
+               .Combined(true)
+               .Compress(true))
+            .Render();
+    %>
+</head>
+<body style="filter:progid:DXImageTransform.Microsoft.Gradient (endColorstr='#003366', startColorstr='#55aaee', gradientType='1'); height: 512px;">
+<%-- gradientType=1  for horizontal gradient --%>            
+    <div class="page">
+        <div id="header">
+            <div id="title">
+                 <h1>Monitoring Tools</h1>
+    <br />            
+   </div>
+  <div id="logindisplay">
+<%--          
+                <% Html.RenderPartial("LogOnUserControl"); %>
+--%>            
+  </div> 
+        </div>
+    <br /><br /><br />            
+   &nbsp;&nbsp; <% 
+    Html.Telerik().Menu()
+        .Name("Menu")
+        .Items(menu =>
+        {
+            // icon removed per DGoman on 8/31
+            //menu.Add().Text("Home").ImageUrl("~/Content/Common/Icons/Suites/win.png").Url("~/Home");
+            menu.Add().Text("Home").Url("~/Home");
+            //menu.Add().Text("Spectrum").ImageUrl("~/Content/Common/Icons/Suites/mvc.png")
+            menu.Add().Text("Spectrum")
+                 .Items(item =>                    
+                 {                        
+                        item.Add().Text("Edit Notes")
+                           .ImageUrl("~/Content/Common/Icons/Mvc/grid.png")
+                           .Url("~/Editor/EditorInGrid");
+                        //item.Add().Text("Refresh Database").ImageUrl("~/Content/Common/Icons/page_white_text.png");                        
+                        //item.Add().Text("Find Duplicate Devices").ImageUrl("~/Content/Common/Icons/page_white_text.png");                        
+                        //item.Add().Text("Examine Policies").ImageUrl("~/Content/Common/Icons/page_white_text.png");                        
+                  });
+            menu.Add().Text("Monitoring Coverage")
+                 //.ImageUrl("~/Content/Common/Icons/Suites/orm.png")
+                 .Items(item =>                    
+                 {                        
+                        item.Add().Text("AssetCenter Report")
+                           .ImageUrl("~/Content/Common/Icons/Mvc/grid.png")
+                           .Url("~/Coverage");
+                        item.Add().Text("Monitored by Patrol").ImageUrl("~/Content/Common/Icons/page_white_text.png");                        
+                        item.Add().Text("Monitored by MOM/SCOM").ImageUrl("~/Content/Common/Icons/page_white_text.png");                        
+                        item.Add().Text("Monitored by SiteScope").ImageUrl("~/Content/Common/Icons/page_white_text.png");                        
+                  });
+    /*******************************************************************      
+            menu.Add().Text("Future Expansion ?")
+                 .ImageUrl("~/Content/Common/Icons/Suites/ajax.png")
+                 .Items(item =>                    
+                 {                        
+                        item.Add().Text("Patrol") .ImageUrl("~/Content/Common/Icons/page_white_text.png");
+                        item.Add().Text("MOM/SCOM").ImageUrl("~/Content/Common/Icons/Mvc/grid.png")
+                             .Items(i2 =>                    
+                             {                        
+                                    i2.Add().Text("SCOM Management Pack Template").ImageUrl("~/Content/Common/Icons/page_white_text.png");                        
+                                    i2.Add().Text("Convert MOM -->SCOM").ImageUrl("~/Content/Common/Icons/page_white_text.png");                        
+                                    i2.Add().Text("Report on Conversion").ImageUrl("~/Content/Common/Icons/page_white_text.png");                        
+                              });
+                        item.Add().Text("SiteScope") .ImageUrl("~/Content/Common/Icons/Mvc/panelbar.png")
+                             .Items(i2 =>                    
+                             {                        
+                                    i2.Add().Text("Add SiteScope Server to MRCoverage") .ImageUrl("~/Content/Common/Icons/page_white_text.png");                        
+                              });
+                        item.Add().Text("ddM").ImageUrl("~/Content/Common/Icons/page_white_text.png");                        
+                  });
+    *******************************************************************/
+        })
+       .Render(); 
+%>
+</div>
+        <div id="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            <div id="footer">
+            </div>
+        </div>
+        <%
+          Html.Telerik().ScriptRegistrar()
+                .DefaultGroup(group => group.Add("telerik.examples.min.js")
+                .Compress(true))
+                .Render(); %>
+</body>
+</html>

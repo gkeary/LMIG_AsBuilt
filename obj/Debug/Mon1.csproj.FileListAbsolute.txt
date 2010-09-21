@@ -1,0 +1,13 @@
+C:\Users\N0199306\_w\MTool\Mon1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\N0199306\_w\MTool\Mon1\bin\Mon1.dll
+C:\Users\N0199306\_w\MTool\Mon1\bin\Mon1.pdb
+C:\Users\N0199306\_w\MTool\Mon1\bin\Telerik.Web.Mvc.dll
+C:\Users\N0199306\_w\MTool\Mon1\bin\Telerik.Web.Mvc.xml
+C:\Users\N0199306\_w\MTool\Mon1\obj\Debug\Mon1.dll
+C:\Users\N0199306\_w\MTool\Mon1\obj\Debug\Mon1.pdb
+C:\Users\gkeary\_w\Mon1\bin\Mon1.dll
+C:\Users\gkeary\_w\Mon1\bin\Mon1.pdb
+C:\Users\gkeary\_w\Mon1\bin\Telerik.Web.Mvc.xml
+C:\Users\gkeary\_w\Mon1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\gkeary\_w\Mon1\obj\Debug\Mon1.dll
+C:\Users\gkeary\_w\Mon1\obj\Debug\Mon1.pdb
